@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Three.js TypeScript Tutorials by Sean Bradley</title>
+        <style>
+
+            body {
+               margin: 0px 
+            }
+            canvas {
+                position: fixed; 
+                top: 0; 
+                left: 0;
+            }
+            main {
+                z-index: 99;
+                color: rgb(208, 208, 208);
+                position: absolute;
+                width: 100%;
+                font-family: "Noto";
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                height: 100%;
+            }
+            p {
+                font-size: x-large;
+            }
+
+            .topLeftFirst {
+                grid-column: 1 / span 3;
+                text-align: center;
+            }
+
+            .topLeftSecond {
+                grid-column: 2;
+                text-align: center;
+            }
+
+            .topRightFirst {
+                grid-column: 11;
+                text-align: center;
+            }
+
+            .topRightSecond {
+                grid-column: 12;
+                text-align: center;
+            }
+
+            .title {
+                grid-column: 1 / span 12;
+                text-align: center;
+                font-size: 10rem;
+                margin: 0px 0px;
+            }
+
+            .mainText {
+                margin-top: 50px;
+                font-size: large;
+                grid-column: 1 / span 12;
+                text-align: center;
+            }
+
+            .buttonContainer {
+                margin-top: 40px;
+                text-align: center;
+                grid-column: 1 / span 12;
+            }
+
+            .button {
+                background: rgba(160, 160, 160, 0.233);
+                border-radius: 10px;
+                border-width: 0;
+                width: 300px;
+                height: 80px;
+                font-family: "Noto";
+                font-size: 2rem;
+                color: rgb(208, 208, 208);
+                
+            }
+
+            .button:hover {
+                background-color:#000000e5;
+                transition: 0.7s;
+            }
+
+            .mobile {
+                visibility: hidden;
+            }
+
+            @media (max-width: 600px) {
+                .title {
+                    font-size: 3rem;
+                }
+
+                .topLeftFirst {
+                    margin-left: 10px;
+                }
+
+                p {
+                    font-size: large;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <main>  
+            <canvas id="myThreeJsCanvas"></canvas>
+              <div class="topLeftFirst"><p>NFT Collection</p></div>
+              <div class='title'>Collection of</div>
+            <div class="title">Vision</div>
+              <div class="mainText"><p>I invite you to join me on our journey to create and share these mesmerizing digital creations, and 
+                <br></br> to experience the excitement and potential of the NFT space!</p></div>
+              
+              <div class='buttonContainer'>
+                <button class="button" id="mainButton">Visit Collection</button>
+              </div>
+        </main>
+        <script type="module" src="bundle.js"></script>
+    </body>
+</html>
