@@ -5,21 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Three.js TypeScript Tutorials by Sean Bradley</title>
         <style>
+
+            body {
+               margin: 0px 
+            }
             canvas {
                 position: fixed; 
                 top: 0; 
                 left: 0;
             }
             main {
-                width: 100vw;
                 z-index: 99;
                 color: rgb(208, 208, 208);
                 position: absolute;
                 width: 100%;
                 font-family: "Noto";
-
                 display: grid;
                 grid-template-columns: repeat(12, 1fr);
+                height: 100%;
             }
             p {
                 font-size: x-large;
@@ -82,6 +85,30 @@
                 transition: 0.7s;
             }
 
+            .mobile {
+                visibility: hidden;
+            }
+
+            @media (max-width: 600px) {
+                .title {
+                    font-size: 3rem;
+                }
+
+                .topLeftFirst {
+                    margin-left: 10px;
+                }
+
+                p {
+                    font-size: large;
+                }
+
+                .mobile{
+                    visibility: visible;
+                    text-align: center;
+                    grid-column: 1 / span 12;
+                }
+            }
+
         </style>
     </head>
 
@@ -91,6 +118,7 @@
               <div class="topLeftFirst"><p>NFT Collection</p></div>
               <div class='title'>Collection of</div>
             <div class="title">Vision</div>
+            <div class="mobile"><p>{click anywhere}</p></div>
               <div class="mainText"><p>I invite you to join me on our journey to create and share these mesmerizing digital creations, and 
                 <br></br> to experience the excitement and potential of the NFT space!</p></div>
               
